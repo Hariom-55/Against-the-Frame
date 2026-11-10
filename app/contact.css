@@ -1,0 +1,26 @@
+/* Contact section + replay-skip logo entrance */
+.contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;margin-top:6rem;text-align:left;scroll-margin-top:6rem}
+.contact-grid form{display:grid;gap:1.6rem}
+.contact-grid label{display:grid;gap:.4rem;font-weight:600;font-size:.95rem;color:var(--mute)}
+.contact-grid input,.contact-grid select,.contact-grid textarea{background:transparent;border:0;border-bottom:2px solid #3a3a3a;border-radius:0;color:var(--bone);font:400 1.1rem var(--body);padding:.7rem 0;width:100%;transition:border-color .2s}
+.contact-grid select option{background:var(--ink);color:var(--bone)}
+.contact-grid textarea{resize:vertical;min-height:8rem}
+.contact-grid input:focus,.contact-grid select:focus,.contact-grid textarea:focus{outline:none;border-color:var(--red)}
+.contact-grid .btn{margin-top:.6rem;justify-self:start;border:0;cursor:pointer}
+.contact-grid .btn:disabled{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-note{margin:0;min-height:1.6em;font-weight:600}
+.form-note.sent{color:var(--bone)}
+.form-note.error{color:var(--red)}
+.direct{display:grid;gap:1.4rem;align-content:start}
+.direct h3{margin:0;font:400 1.8rem/1 var(--display);text-transform:uppercase;color:var(--red)}
+.btn.ghost{background:transparent;border:2px solid var(--bone);color:var(--bone);margin-top:0;justify-self:start}
+.btn.ghost:hover{background:var(--bone);color:var(--ink)}
+.direct .mail{font-size:1.2rem;font-weight:600;word-break:break-all}
+.direct ul{list-style:none;margin:0;padding:0;display:flex;gap:1.4rem;flex-wrap:wrap}
+.direct ul a{font-weight:600;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:3rem;margin-top:4rem}}
+
+/* Logo entrance for visits that skip the lens intro (not on the first view) */
+@keyframes logoIn{from{opacity:0;transform:scale(1.12);filter:blur(10px)}}
+html:not(.pre):not(.go) .mark svg{animation:logoIn .9s cubic-bezier(.2,.8,.2,1) both}

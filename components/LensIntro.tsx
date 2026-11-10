@@ -37,6 +37,7 @@ export default function LensIntro() {
       cancelAnimationFrame(raf);
       de.classList.add("go");
       de.classList.remove("pre");
+      try { sessionStorage.setItem("atf-intro", "1"); } catch {}
       if (logo) { logo.style.transform = ""; logo.style.filter = ""; }
       setDone(true);
     };

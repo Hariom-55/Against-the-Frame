@@ -6,7 +6,7 @@ import Ticker from "@/components/Ticker";
 import About from "@/components/About";
 import ServiceStack from "@/components/ServiceStack";
 import Process from "@/components/Process";
-import Cta from "@/components/Cta";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
       <About />
       <ServiceStack />
       <Process />
-      <Cta />
+      <Contact />
       <footer>
         <div className="wrap">
           <span>ATF Media House</span>
