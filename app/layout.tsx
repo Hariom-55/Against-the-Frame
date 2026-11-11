@@ -6,6 +6,7 @@ import "./portfolio.css";
 import "./partners.css";
 import "./service.css";
 import { DEFAULT_DESC, DEFAULT_TITLE, SITE_URL } from "@/data/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton", display: "swap" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage", display: "swap" });
@@ -28,7 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: preScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

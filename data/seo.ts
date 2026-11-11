@@ -9,11 +9,11 @@ export const SITE_URL = (
 export const BRAND = "ATF Media House";
 
 /** Add the client's city / service area once confirmed. It is appended to titles, headings and descriptions. */
-export const CITY = ""; // <- REPLACE, e.g. "Mumbai"
+export const CITY = "Mumbai"; // <- REPLACE, e.g. "Mumbai"
 export const inCity = CITY ? ` in ${CITY}` : "";
 
-export const DEFAULT_TITLE = `${BRAND} | Video, Branding and Digital Marketing${inCity}`;
-export const DEFAULT_DESC = `${BRAND} brings creative production and digital services together: video production, brand design, social media, digital marketing and websites${inCity}.`;
+export const DEFAULT_TITLE = `${BRAND} | Video, Design, Web & SEO${inCity}`;
+export const DEFAULT_DESC = `${BRAND} brings video production, graphic design, websites and SEO together for businesses${inCity}.`;
 
 const real = (u?: string) => (u && !u.includes("REPLACE") ? u : undefined);
 
@@ -26,6 +26,8 @@ export const orgJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
   description: DEFAULT_DESC,
+  ...(CITY ? {areaServed: CITY} : {}),
   founder: { "@type": "Person", name: "Prashant Tiwari" },
   sameAs: [real(site.instagram), real(site.youtube), real(site.linkedin)].filter(Boolean),
 };
+  
