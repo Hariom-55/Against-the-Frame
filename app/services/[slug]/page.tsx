@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { services, slugify } from "@/data/services";
 import { BRAND, CITY, SITE_URL, inCity } from "@/data/seo";
 
-
+export const instant = false;
 export const generateStaticParams = () => services.map(([t]) => ({ slug: slugify(t) }));
 
 const find = (slug: string) => services.find(([t]) => slugify(t) === slug);

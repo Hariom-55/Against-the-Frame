@@ -24,7 +24,7 @@ const preScript = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').matche
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${anton.variable} ${bricolage.variable}`} suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" className={`${anton.variable} ${bricolage.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: preScript }} />
       </head>

@@ -37,8 +37,11 @@ export default function About() {
             <p>Support for a single project or a continuing brand partnership.</p>
           </Reveal>
           <Reveal>
-            <h3>The founder</h3>
-            <p>Founded by Prashant Tiwari, ATF draws on hands-on experience in video editing, content creation, cinematography, website development and digital operations.</p>
+            <h3>What drives the work</h3>
+            <p>ATF is built around a multidisciplinary approach to creative and digital
+    work. Our experience spans video editing, content creation,
+    cinematography, website development and digital operations — bringing
+    creative execution and technical thinking together under one roof.</p>
           </Reveal>
         </div>
         <div className="stats">

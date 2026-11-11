@@ -33,4 +33,5 @@ export const events: PortfolioEvent[] = [
     ],
     images: ["awards1.png", "awards2.png", "awards3.png"], 
   },
+  
 ];
