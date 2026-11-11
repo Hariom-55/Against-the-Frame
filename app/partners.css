@@ -1,0 +1,12 @@
+.partners{padding:min(10vh,6rem) 0;border-top:1px solid #2a2a2a}
+.partners h2{font:400 clamp(1.8rem,4vw,3rem)/1.05 var(--display);margin:0;text-transform:uppercase;max-width:22ch}
+.pmarq{overflow:hidden;margin-top:2.6rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.ptrack{display:flex;width:max-content;animation:pm 45s linear infinite}
+.ptrack:hover{animation-play-state:paused}
+@keyframes pm{to{transform:translateX(-50%)}}
+.pset{display:flex;flex-wrap:nowrap;align-items:center;gap:4.5rem;padding-right:4.5rem}
+.plogo{flex:none;height:44px;width:auto;max-width:200px;object-fit:contain;opacity:.85;transition:opacity .3s,transform .3s}
+.plogo:hover{opacity:1;transform:scale(1.06)}
+.plogo.txt{height:auto;font:400 1.4rem var(--display);text-transform:uppercase;white-space:nowrap}
+@media(max-width:620px){.plogo{height:34px}.pset{gap:3rem;padding-right:3rem}}
+@media(prefers-reduced-motion:reduce){.ptrack{animation:none;width:auto;justify-content:center}.pset{flex-wrap:wrap;justify-content:center}.pset[aria-hidden="true"]{display:none}}

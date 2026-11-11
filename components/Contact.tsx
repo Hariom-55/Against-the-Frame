@@ -4,6 +4,18 @@ import { hasFinePointer, prefersReducedMotion } from "@/lib/hooks";
 import { services } from "@/data/services";
 import { site, whatsappLink } from "@/data/site";
 
+const WhatsAppIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+    <g transform="translate(7 6.6) scale(.45)"><path strokeWidth="3.6" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></g>
+  </svg>
+);
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  </svg>
+);
+
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function Contact() {
@@ -41,8 +53,8 @@ export default function Contact() {
     }
   }
 
+  const igHandle = "@" + site.instagram.replace(/[?#].*$/, "").replace(/\/+$/, "").split("/").pop();
   const socials = [
-    ["Instagram", site.instagram],
     ["YouTube", site.youtube],
     ["LinkedIn", site.linkedin],
   ].filter((s): s is [string, string] => !!s[1]);
@@ -82,7 +94,12 @@ export default function Contact() {
 
           <aside className="direct">
             <h3>Or reach us directly</h3>
-            {whatsappLink && <a className="btn ghost" href={whatsappLink} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>}
+            <a className="social" href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <span className="ico"><WhatsAppIcon /></span><span>+{site.whatsapp}</span>
+            </a>
+            <a className="social" href={site.instagram} target="_blank" rel="noopener noreferrer">
+              <span className="ico"><InstagramIcon /></span><span>{igHandle}</span>
+            </a>
             {site.email && <a className="mail" href={`mailto:${site.email}`}>{site.email}</a>}
             {socials.length > 0 && (
               <ul>

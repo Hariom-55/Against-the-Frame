@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Anton, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import "./contact.css";
+import "./portfolio.css";
+import "./partners.css";
 
 const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton", display: "swap" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage", display: "swap" });

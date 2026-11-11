@@ -24,3 +24,9 @@
 /* Logo entrance for visits that skip the lens intro (not on the first view) */
 @keyframes logoIn{from{opacity:0;transform:scale(1.12);filter:blur(10px)}}
 html:not(.pre):not(.go) .mark svg{animation:logoIn .9s cubic-bezier(.2,.8,.2,1) both}
+
+/* WhatsApp + Instagram icon links */
+.social{display:flex;align-items:center;gap:.9rem;width:fit-content;font-weight:600;font-size:1.15rem;text-decoration:none}
+.social .ico{display:grid;place-items:center;width:48px;height:48px;border:2px solid var(--bone);border-radius:50%;transition:background .25s,border-color .25s,color .25s}
+.social .ico svg{width:24px;height:24px}
+.social:hover .ico{background:var(--red);border-color:var(--red);color:var(--ink)}
