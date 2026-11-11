@@ -4,13 +4,18 @@ import "./globals.css";
 import "./contact.css";
 import "./portfolio.css";
 import "./partners.css";
+import "./service.css";
+import { DEFAULT_DESC, DEFAULT_TITLE, SITE_URL } from "@/data/seo";
 
 const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton", display: "swap" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "ATF Media House | Against the Frame",
-  description: "A media and digital solutions partner for brands that want thoughtful content and technology that works.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: DEFAULT_TITLE, template: "%s | ATF Media House" },
+  description: DEFAULT_DESC,
+  openGraph: { type: "website", siteName: "ATF Media House" },
+  twitter: { card: "summary_large_image" },
 };
 
 // Runs before paint: plays the lens intro only on a visitor's first view this session,

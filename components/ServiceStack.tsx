@@ -1,7 +1,8 @@
 "use client";
 import { useRef, type CSSProperties } from "react";
 import { prefersReducedMotion, useOnScroll } from "@/lib/hooks";
-import { services } from "@/data/services";
+import Link from "next/link";
+import { services, slugify } from "@/data/services";
 
 export default function ServiceStack() {
   const panels = useRef<(HTMLElement | null)[]>([]);
@@ -31,6 +32,7 @@ export default function ServiceStack() {
             <div>
               <p className="hint">{hint}</p>
               <h3>{title}</h3>
+              <Link className="more" href={`/services/${slugify(title)}`}>Learn more</Link>
             </div>
             <div className="items">
               {items.map(([name, text]) => (

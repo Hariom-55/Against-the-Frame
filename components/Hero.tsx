@@ -4,7 +4,8 @@ import { hasFinePointer, prefersReducedMotion } from "@/lib/hooks";
 
 function Logo() {
   return (
-    <h1 className="mark" aria-label="ATF, Against the Frame">
+    <h1 className="mark">
+      <span className="sr-only">ATF Media House: creative production and digital services</span>
       <svg id="logo" viewBox="70 255 780 290" aria-hidden="true">
         <path fill="#e0301e" fillRule="evenodd" d="M122 268H322Q362 268 362 308V490Q362 530 322 530H240V466H190V530H122Q82 530 82 490V308Q82 268 122 268ZM170 361H248V386H170Z" />
         <path fill="#e0301e" d="M365 268H559Q581 268 581 290V348Q581 370 559 370H527V508Q527 530 505 530H417Q395 530 395 508V370H365Q343 370 343 348V290Q343 268 365 268Z" />

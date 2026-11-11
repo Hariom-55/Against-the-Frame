@@ -9,3 +9,6 @@ export const services: Service[] = [
   ];
 
 export const tickerNames: string[] = ['Video production','Editing','Brand identity','Graphic design','Social media','Content strategy','Meta advertising','SEO','Websites','Business tools'];
+
+/** URL slug for a service page, e.g. "Video production & editing" -> "video-production-editing" */
+export const slugify = (t: string) => t.toLowerCase().replace(/&/g, " ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

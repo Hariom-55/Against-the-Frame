@@ -8,8 +8,9 @@ import { Reveal } from "@/lib/hooks";
 import { events } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title: "Portfolio | ATF Media House",
+  title: "Portfolio",
   description: "Selected events covered by ATF Media House, with what we contributed to each.",
+  alternates: { canonical: "/portfolio" },
 };
 
 // Page text. Edit freely.

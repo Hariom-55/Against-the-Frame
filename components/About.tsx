@@ -37,12 +37,12 @@ export default function About() {
             <p>Support for a single project or a continuing brand partnership.</p>
           </Reveal>
           <Reveal>
-            <h3>What drives the work</h3>
-            <p>ATF is built around a multidisciplinary approach to creative and digital work. Our experience spans video editing, content creation, cinematography, website development and digital operations — bringing creative execution and technical thinking together under one roof.</p>
+            <h3>The founder</h3>
+            <p>Founded by Prashant Tiwari, ATF draws on hands-on experience in video editing, content creation, cinematography, website development and digital operations.</p>
           </Reveal>
         </div>
         <div className="stats">
-          <div className="stat"><CountUp to={6} /><span>service lines under one roof</span></div>
+          <div className="stat"><CountUp to={5} /><span>service lines under one roof</span></div>
           <div className="stat"><CountUp to={15} /><span>specific ways we can help</span></div>
           <div className="stat"><CountUp to={3} /><span>steps from first call to handover</span></div>
         </div>
