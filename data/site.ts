@@ -1,8 +1,8 @@
 const env = (v?: string) => (v && v.trim() ? v.trim() : undefined);
 
 // REPLACE these two placeholders with the client's real details (or set the env vars in .env.local / Vercel).
-const INSTAGRAM_URL = "https://instagram.com/REPLACE_HANDLE"; // full profile URL
-const WHATSAPP_NUMBER = "910000000000"; // digits only, with country code, no + or spaces
+const INSTAGRAM_URL = "https://instagram.com/atfmediahouse/"; // full profile URL
+const WHATSAPP_NUMBER = "918108278184"; // digits only, with country code, no + or spaces
 
 /** Client contact details. Email, YouTube and LinkedIn stay hidden when unset. */
 export const site = {

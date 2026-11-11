@@ -24,9 +24,13 @@ export const events: PortfolioEvent[] = [
     images: ["image1.png", "image2.png", "image3.png"], 
   },
   {
-    title: "Event Title", 
-    description: "Event description goes here.", 
-    contributions: ["Contribution one goes here", "Contribution two goes here", "Contribution three goes here"],
-    images: ["event-3-1.jpg", "event-3-2.jpg", "event-3-3.jpg"], 
+    title: "ACE ALPHA AWARDS", 
+    description: "The ACE Alpha Awards brought together industry professionals and distinguished guests for an event celebrating achievements and recognition. The event featured award presentations, keynote moments, stage appearances, audience interactions and celebratory highlights.", 
+    contributions: [
+      "Structured the footage into a concise highlight sequence covering event branding, stage presentations, award moments and audience reactions.", 
+      "Incorporated event branding and title sequences to establish the identity of the ACE Alpha Awards.", 
+      "Delivered a short-form promotional edit designed to communicate the atmosphere and highlights of the event within a limited runtime."
+    ],
+    images: ["awards1.png", "awards2.png", "awards3.png"], 
   },
 ];
