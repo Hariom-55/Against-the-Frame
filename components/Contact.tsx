@@ -81,7 +81,7 @@ export default function Contact() {
             </label>
             <label>Tell us about the project<textarea name="message" required minLength={10} maxLength={3000} rows={5} /></label>
             <div className="hp" aria-hidden="true">
-              <label>Company<input name="company" tabIndex={-1} autoComplete="off" /></label>
+              <label>Leave this field empty<input name="hp_check" tabIndex={-1} autoComplete="off" /></label>
             </div>
             <button className="btn" type="submit" disabled={status === "sending"}>
               {status === "sending" ? "Sending..." : "Send message"}

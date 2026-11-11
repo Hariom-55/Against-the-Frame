@@ -12,7 +12,7 @@ export async function POST(req: Request) {
   }
 
   // Honeypot: real visitors never fill this hidden field. Pretend success to bots.
-  if (clean(body.company, 100)) return NextResponse.json({ ok: true });
+  if (clean(body.hp_check, 100)) return NextResponse.json({ ok: true });
 
   const name = clean(body.name, 100);
   const email = clean(body.email, 200);
